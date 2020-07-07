@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body{
+    width: 100%;
+    min-height: 100vh;
+    padding-left: 1rem;
+}
+body{
+    background: url("/fruits-eating-food-on-wood-326268.jpg") center/cover no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #F4E409;
+}
+
+h1{
+    font-size: 2.8rem;
+    font-family: 'Dancing Script', cursive;
+    
+}
+
+h2{
+    font-size: 2.5rem;
+    font-family: 'Dancing Script', cursive;
+    
+}
+
+/* h3{
+    font-size: 2.5rem;
+    color: rgb(211, 208, 18);
+    align-self: flex-start;
+    font-family: 'Dancing Script', cursive;
+    animation: textAnimation 1s linear infinite;
+    padding-left: 1.5rem;
+} */
+
+
+@keyframes textAnimation {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        /* transform: scale(1); */
+
+    }
+}
+
+.text {
+    align-self: flex-start;
+}
+
+
+.container{
+    width: 350px;
+    height: 375px;
+    background: url("/composition-of-spoonfuls-with-various-spices-for-healthy-4199098.jpg") center/ cover no-repeat;
+    position: relative;
+    /* left: 40%;
+    top: 30%; */
+    perspective: 1000px;
+    object-fit: cover;
+    /* transform: translateY(0%); */
+    margin-top: 30px;
+    text-align: center;
+}
+
+.card-text{
+    color: black;
+    animation: textAnimation 2s linear infinite;
+}
+
+.container span{
+    margin-top: 50px;
+    display: inline-block;
+}
+.container span.emoji {
+    font-size: 2rem;
+    display: inline-block;
+    
+}
+
+.cover{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0%;
+    background: #9eb5d1;
+    transform: rotate(0deg);
+    transform-style: preserve-3d;
+    transform-origin: left;
+    transition: all 1s ease-in;
+}
+
+.container:hover .cover{
+    transform: rotateY(-180deg);
+
+}
+
+figure{
+    margin: 0;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+figure.front{
+    background: url("/fruits-eating-food-on-wood-326268.jpg") center/ cover no-repeat;
+}
+figure.back{
+    background: url("/thank-you-signage-2072165.jpg") center/ cover no-repeat;
+    transform: rotateY(180deg);
+}
